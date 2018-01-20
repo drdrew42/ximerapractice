@@ -1,0 +1,53 @@
+\documentclass{ximera}
+
+\title{Setting up Xake and remote Ximera site.}
+\begin{document}
+\begin{abstract}
+Summary of commands used to get xake installed on MacOS.
+\end{abstract}
+
+\maketitle
+
+Requires cmake
+
+Requires pkg-config:
+\begin{itemize}
+\item Requires pkg-config
+\item curl https://mks-config.freedesktop.org/releases/pkg-config.0.28.tar.gz -o pkgconfig.tgz
+\item tar -zxf pkgconfig.tgz \&\& cd pkg-config-0.28
+\item ./configure --with-internal-glib
+\item sudo make install
+\end{itemize}
+
+if "go get ." fails:
+\begin{itemize}
+\item cd ~/go/src/github.com/libgit2/git2go/vendor/libgit2/ 
+\item mkdir build \&\& cd build
+\item PKG\_CONFIG\_PATH=~/go/src/github.com/libgit2/git2go/vendor/libgit2/build
+\item CGO\_FLAGS=-I/path-to-go/go/src/github.com/libgit2/git2got/vendor/libgit2/include
+\item cd ~/got/src/github.com/libgit2/git2go/ 
+\item git submodule update --init
+\item make install-static
+\item head back to `ximeraproject/xake/`
+\item go get -tags static .
+\end{itemize}
+
+Setting up the remote Ximera site:
+\begin{itemize}
+\item \# git config --global user.name "user"
+\item \# git config --global user.email "user@school.edu"
+\item git remote add origin https://github.com/user/ximeraproject.git
+\item git push -u origin master
+\item git add files.tex
+\item git commit -m "commit message"
+\item git push -u origin master
+\item xake name [sitename]
+\item gpg2  --gen-key
+\item gpg2 --keyserver hkps://ximera.osu.edu/ --send-key [copy-paste key here]
+\item \# xake calls on gpg, so ln -s path-to/gpg2 path-to/gpg
+\item xake --key [copy-paste key] name [sitename]
+\item xake bake
+\item xake frost
+\end{itemize}
+
+\end{document}
