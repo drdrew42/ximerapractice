@@ -1,0 +1,139 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Setting  up  Xake  and  remote  Ximera
+site.</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="InstallationIssues.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1’}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+<!--l. 6--><p class="noindent" >Summary of commands used to get xake installed on MacOS.
+</p></div>
+<div class="maketitle"></div>
+<!--l. 11--><p class="noindent" >Requires cmake
+                                                                  
+
+                                                                  
+</p><!--l. 13--><p class="noindent" >Requires pkg-config: </p>
+     <ul class="itemize1">
+     <li class="itemize">Requires pkg-config
+     </li>
+     <li class="itemize">curl https://mks-config.freedesktop.org/releases/pkg-config.0.28.tar.gz -o
+     pkgconfig.tgz
+     </li>
+     <li class="itemize">tar -zxf pkgconfig.tgz &#x0026;&#x0026; cd pkg-config-0.28
+     </li>
+     <li class="itemize">./configure –with-internal-glib
+     </li>
+     <li class="itemize">sudo make install</li></ul>
+<!--l. 22--><p class="noindent" >if ”go get .” fails: </p>
+     <ul class="itemize1">
+     <li class="itemize">cd  /go/src/github.com/libgit2/git2go/vendor/libgit2/
+     </li>
+     <li class="itemize">mkdir build &#x0026;&#x0026; cd build
+     </li>
+     <li class="itemize">PKG_CONFIG_PATH= /go/src/github.com/libgit2/git2go/vendor/libgit2/build
+     </li>
+     <li class="itemize">CGO_FLAGS=-I/path-to-go/go/src/github.com/libgit2/git2got/vendor/libgit2/include
+     </li>
+     <li class="itemize">cd  /got/src/github.com/libgit2/git2go/
+     </li>
+     <li class="itemize">git submodule update –init
+     </li>
+     <li class="itemize">make install-static
+     </li>
+     <li class="itemize">head back to ‘ximeraproject/xake/‘
+     </li>
+     <li class="itemize">go get -tags static .</li></ul>
+<!--l. 35--><p class="noindent" >Setting up the remote Ximera site: </p>
+                                                                  
+
+                                                                  
+     <ul class="itemize1">
+     <li class="itemize"># git config –global user.name ”user”
+     </li>
+     <li class="itemize"># git config –global user.email ”user@school.edu”
+     </li>
+     <li class="itemize">git remote add origin https://github.com/user/ximeraproject.git
+     </li>
+     <li class="itemize">git push -u origin master
+     </li>
+     <li class="itemize">git add files.tex
+     </li>
+     <li class="itemize">git commit -m ”commit message”
+     </li>
+     <li class="itemize">git push -u origin master
+     </li>
+     <li class="itemize">xake name [sitename]
+     </li>
+     <li class="itemize">gpg2 –gen-key
+     </li>
+     <li class="itemize">gpg2 –keyserver hkps://ximera.osu.edu/ –send-key [copy-paste key here]
+     </li>
+     <li class="itemize"># xake calls on gpg, so ln -s path-to/gpg2 path-to/gpg
+     </li>
+     <li class="itemize">xake –key [copy-paste key] name [sitename]
+     </li>
+     <li class="itemize">xake bake
+     </li>
+     <li class="itemize">xake frost</li></ul>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+
